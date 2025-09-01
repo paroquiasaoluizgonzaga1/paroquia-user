@@ -17,6 +17,8 @@ interface IHeaderState {
     setHeader: (path: string) => void;
 }
 
+import baseLogo from '../assets/pages_header.jpg';
+
 const getHeader = (path: string) => {
     const cleanPath = path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
 
@@ -27,7 +29,7 @@ const getHeader = (path: string) => {
             iconColor: '#F69F53',
             href: '/avisos',
             bg: '#1A2855',
-            imagePath: '/src/assets/pages_header.jpg',
+            imagePath: baseLogo,
         };
     }
 
@@ -39,7 +41,7 @@ const getHeader = (path: string) => {
                 iconColor: '#F69F53',
                 href: '/sacramentos',
                 bg: '#1A2855',
-                imagePath: '/src/assets/pages_header.jpg',
+                imagePath: baseLogo,
             };
         case '/horarios-de-missas':
             return {
@@ -47,7 +49,7 @@ const getHeader = (path: string) => {
                 icon: <LuAlarmClock />,
                 iconColor: '#F69F53',
                 href: '/horarios-de-missas',
-                imagePath: '/src/assets/pages_header.jpg',
+                imagePath: baseLogo,
                 bg: '#1A2855',
             };
         case '/portal-da-transparencia':
@@ -65,7 +67,7 @@ const getHeader = (path: string) => {
                 iconColor: '#F69F53',
                 href: '/pastorais-grupos-e-servicos',
                 bg: '#1A2855',
-                imagePath: '/src/assets/pages_header.jpg',
+                imagePath: baseLogo,
             };
         case '/faca-sua-doacao':
             return {
@@ -82,7 +84,7 @@ const getHeader = (path: string) => {
                 iconColor: '#F69F53',
                 href: '/avisos',
                 bg: '#1A2855',
-                imagePath: '/src/assets/pages_header.jpg',
+                imagePath: baseLogo,
             };
         case '/cadastro-de-dizimista':
             return {
@@ -98,7 +100,7 @@ const getHeader = (path: string) => {
                 icon: <PiHouse />,
                 iconColor: '#F69F53',
                 href: '/',
-                imagePath: '/src/assets/paroquia_header.jpg',
+                imagePath: baseLogo,
                 bg: '#5E92CC',
             };
     }

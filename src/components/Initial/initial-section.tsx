@@ -10,8 +10,8 @@ import { Menu } from '../Header/Menu';
 import { LiveStreamCard } from './live-stream-card';
 import { HighlightedNewsCard } from './highlighted-news-card';
 
-const headerImage = '/src/assets/paroquia_header.jpg';
-const headerImageMobile = '/src/assets/paroquia_header_mobile.jpg';
+import headerImage from '../../assets/paroquia_header.jpg';
+import headerImageMobile from '../../assets/paroquia_header_mobile.jpg';
 
 export function InitialSection() {
     const navigate = useNavigate();
