@@ -1,0 +1,35 @@
+.swiper_rooms {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.swiper_rooms .swiper-slide {
+  max-width: 400px;
+}
+
+.swiper_rooms .swiper-pagination-bullet-active {
+  background-color: #e4285e;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper_rooms .swiper-button-prev,
+.swiper_rooms .swiper-button-next {
+  color: #e4285e;
+}
+
+@media (max-width: 650px) {
+
+  .swiper_rooms {
+    padding-bottom: 80px;
+  }
+
+  .swiper_rooms .swiper-slide {
+    max-width: 280px;
+  }
+
+  .swiper_rooms .swiper-button-prev,
+  .swiper_rooms .swiper-button-next {
+    display: none;
+  }
+}
