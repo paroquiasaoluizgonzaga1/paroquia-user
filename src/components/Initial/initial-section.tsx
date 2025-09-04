@@ -65,12 +65,10 @@ export function InitialSection() {
                     Horários de Missas
                 </Heading>
             </HStack>
-            {isLoading && <CardSkeleton count={1} />}
-            {!isLoading && headquarters && (
-                <Flex w="full" maxW={'800px'} px={4}>
-                    <MassLocationCard massLocation={headquarters} />
-                </Flex>
-            )}
+            <Flex w="full" maxW={'800px'} px={4}>
+                {isLoading && <CardSkeleton count={1} />}
+                {!isLoading && headquarters && <MassLocationCard massLocation={headquarters} />}
+            </Flex>
             <Button
                 rounded={'full'}
                 bg={'#0D3D71'}
