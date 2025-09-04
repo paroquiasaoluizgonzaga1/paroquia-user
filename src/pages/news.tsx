@@ -60,13 +60,13 @@ export function News() {
     return (
         <Flex bg={'#1A2855'} justify={'center'} align={'center'} w="full">
             <Flex flexDir={'column'} gap={8} py={8} px={4} maxW={'800px'} justify={'center'} align={'center'}>
-                {isLoading && <CardSkeleton count={5} />}
-                {!isLoading && news && news.length > 0 && (
-                    <Stack w="full" gap={8}>
+                <Stack w="full" gap={8}>
+                    {isLoading && <CardSkeleton count={5} />}
+                    {!isLoading && news && news.length > 0 && (
                         <For each={news}>{(news) => <NewsCard key={news.id} news={news} />}</For>
-                    </Stack>
-                )}
-                {!isLoading && news && news.length === 0 && <EmptyList />}
+                    )}
+                    {!isLoading && news && news.length === 0 && <EmptyList />}
+                </Stack>
                 <Pagination
                     pageIndex={filter.pageIndex}
                     pageSize={filter.pageSize}

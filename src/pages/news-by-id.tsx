@@ -30,37 +30,30 @@ export function NewsById() {
     }, []);
 
     return (
-        <Flex
-            flexDir={'column'}
-            justify={'center'}
-            align={'center'}
-            gap={8}
-            bg={'#1A2855'}
-            py={8}
-            px={4}
-            maxW={'800px'}
-        >
-            {isLoading && <CardSkeleton count={1} />}
-            {!isLoading && news && (
-                <Stack w="full" gap={8}>
-                    <NewsByIdCard news={news} />
-                </Stack>
-            )}
-            {!isLoading && !news && <EmptyList />}
-            <Button
-                mt={4}
-                rounded={'full'}
-                fontSize={'sm'}
-                bg={'#0D3D71'}
-                _hover={{ bg: '#1B4D85' }}
-                color={'white'}
-                w="fit-content"
-                fontWeight={700}
-                onClick={() => navigate('/avisos')}
-            >
-                <LuCircleArrowLeft />
-                Voltar para os avisos
-            </Button>
+        <Flex bg={'#1A2855'} justify={'center'} align={'center'} w="full">
+            <Flex flexDir={'column'} justify={'center'} align={'center'} gap={8} py={8} px={4} maxW={'800px'}>
+                {isLoading && <CardSkeleton count={1} />}
+                {!isLoading && news && (
+                    <Stack w="full" gap={8}>
+                        <NewsByIdCard news={news} />
+                    </Stack>
+                )}
+                {!isLoading && !news && <EmptyList />}
+                <Button
+                    mt={4}
+                    rounded={'full'}
+                    fontSize={'sm'}
+                    bg={'#0D3D71'}
+                    _hover={{ bg: '#1B4D85' }}
+                    color={'white'}
+                    w="fit-content"
+                    fontWeight={700}
+                    onClick={() => navigate('/avisos')}
+                >
+                    <LuCircleArrowLeft />
+                    Voltar para os avisos
+                </Button>
+            </Flex>
         </Flex>
     );
 }

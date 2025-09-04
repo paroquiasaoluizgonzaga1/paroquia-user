@@ -44,25 +44,25 @@ export function NewsSection() {
                     Comunicados e avisos
                 </Heading>
             </HStack>
-            {isLoading && <CardSkeleton count={3} />}
-            {!isLoading && news && news.length > 0 && (
-                <Stack w="full" px={4} maxW={'800px'} gap={5} align={'center'}>
+            <Stack w="full" px={4} maxW={'800px'} gap={5} align={'center'}>
+                {isLoading && <CardSkeleton count={3} />}
+                {!isLoading && news && news.length > 0 && (
                     <For each={news}>{(news) => <NewsCard key={news.id} news={news} />}</For>
-                    <Button
-                        mt={4}
-                        rounded={'full'}
-                        fontSize={'sm'}
-                        bg={'white'}
-                        color={'#0D3D71'}
-                        w="fit-content"
-                        fontWeight={700}
-                        onClick={() => navigate('/avisos')}
-                    >
-                        <LuCirclePlus />
-                        ver todos os avisos
-                    </Button>
-                </Stack>
-            )}
+                )}
+                <Button
+                    mt={4}
+                    rounded={'full'}
+                    fontSize={'sm'}
+                    bg={'white'}
+                    color={'#0D3D71'}
+                    w="fit-content"
+                    fontWeight={700}
+                    onClick={() => navigate('/avisos')}
+                >
+                    <LuCirclePlus />
+                    ver todos os avisos
+                </Button>
+            </Stack>
             {!isLoading && news && news.length === 0 && <EmptyList />}
         </Flex>
     );
