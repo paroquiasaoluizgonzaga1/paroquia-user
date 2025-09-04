@@ -2,7 +2,7 @@ import type { IQuickAccess } from '@/interfaces/IQuickAccess';
 import { LuInfo } from 'react-icons/lu';
 import { IoMdHeart } from 'react-icons/io';
 import { PiCross, PiSquaresFour, PiHandsPrayingFill, PiHeartFill } from 'react-icons/pi';
-import { FaBookBible, FaPersonPraying } from 'react-icons/fa6';
+import { FaBookBible } from 'react-icons/fa6';
 import { Flex, Heading, Stack } from '@chakra-ui/react';
 import { QuickAccessCard } from './quick-access-card';
 
@@ -35,13 +35,13 @@ const quickAccessLinks: IQuickAccess[] = [
         url: '/faca-sua-doacao',
         isExternal: false,
     },
-    {
-        icon: <FaPersonPraying />,
-        color: 'blue.800',
-        title: 'Preparação para a confissão',
-        url: '/calendario-de-eventos',
-        isExternal: true,
-    },
+    // {
+    //     icon: <FaPersonPraying />,
+    //     color: 'blue.800',
+    //     title: 'Preparação para a confissão',
+    //     url: '/calendario-de-eventos',
+    //     isExternal: true,
+    // },
     {
         icon: <FaBookBible />,
         color: 'red.800',

@@ -67,10 +67,15 @@ export function Tithe() {
     return (
         <Flex flexDir={'column'} justify={'center'} align={'center'} gap={8} bg={'#1A2855'} pb={8} px={4}>
             <Stack w="full" maxW={'800px'} gap={12}>
-                <Stack mt={8}>
+                <Stack mt={8} gap={8}>
                     <Blockquote cite={'2 Coríntios 9:7'} fontSize={'sm'} color={'white'} fontStyle={'italic'}>
                         Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama
                         quem dá com alegria.
+                    </Blockquote>
+                    <Blockquote cite={'Malaquias 3:10'} fontSize={'sm'} color={'white'} fontStyle={'italic'}>
+                        Tragam o dízimo todo ao depósito do templo, para que haja alimento em minha casa. Ponham-me à
+                        prova", diz o Senhor dos Exércitos, "e vejam se não vou abrir as comportas dos céus e derra­mar
+                        sobre vocês tantas bênçãos que nem terão onde guardá-las.
                     </Blockquote>
                 </Stack>
                 <Stack w="full" textAlign={'center'} color={'white'} gap={4} fontWeight={500}>
