@@ -21,6 +21,10 @@ export function Router() {
                     element={<OtherSchedulesSection type={OtherScheduleTypes.GroupsAndServices} />}
                 />
                 <Route path="/sacramentos" element={<OtherSchedulesSection type={OtherScheduleTypes.Sacrament} />} />
+                <Route
+                    path="/outras-informacoes"
+                    element={<OtherSchedulesSection type={OtherScheduleTypes.OtherInformations} />}
+                />
                 <Route path="/portal-da-transparencia" element={<TransparencyPortal />} />
                 <Route path="/faca-sua-doacao" element={<Pix />} />
                 <Route path="/avisos" element={<News />} />

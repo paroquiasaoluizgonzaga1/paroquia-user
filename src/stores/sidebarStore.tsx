@@ -1,4 +1,5 @@
 import type { IMenu } from '@/interfaces/IMenu';
+import { FaRegBell } from 'react-icons/fa6';
 import { HiOutlineHome, HiHome } from 'react-icons/hi';
 import { LuInfo } from 'react-icons/lu';
 import {
@@ -45,6 +46,12 @@ const menuItems: IMenu[] = [
         iconActive: <PiHeartFill />,
     },
     {
+        title: 'Comunicados e avisos',
+        href: '/avisos',
+        icon: <FaRegBell />,
+        iconActive: <FaRegBell />,
+    },
+    {
         title: 'Sacramentos',
         href: '/sacramentos',
         icon: <PiCross />,
@@ -55,6 +62,12 @@ const menuItems: IMenu[] = [
         href: '/pastorais-grupos-e-servicos',
         icon: <PiSquaresFour />,
         iconActive: <PiSquaresFourFill />,
+    },
+    {
+        title: 'Outras informações',
+        href: '/outras-informacoes',
+        icon: <LuInfo />,
+        iconActive: <LuInfo />,
     },
     {
         title: 'Cadastro de dizimista',

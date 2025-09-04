@@ -79,10 +79,19 @@ const getHeader = (path: string) => {
             };
         case '/avisos':
             return {
-                title: 'Informações e avisos',
+                title: 'Comunicados e avisos',
                 icon: <FaRegBell />,
                 iconColor: '#F69F53',
                 href: '/avisos',
+                bg: '#1A2855',
+                imagePath: baseLogo,
+            };
+        case '/outras-informacoes':
+            return {
+                title: 'Outras informações',
+                icon: <LuInfo />,
+                iconColor: '#F69F53',
+                href: '/outras-informacoes',
                 bg: '#1A2855',
                 imagePath: baseLogo,
             };

@@ -58,42 +58,35 @@ export function News() {
     }, [filter]);
 
     return (
-        <Flex
-            flexDir={'column'}
-            justify={'center'}
-            align={'center'}
-            gap={8}
-            bg={'#1A2855'}
-            py={8}
-            px={4}
-            maxW={'800px'}
-        >
-            {isLoading && <CardSkeleton count={5} />}
-            {!isLoading && news && news.length > 0 && (
-                <Stack w="full" gap={8}>
-                    <For each={news}>{(news) => <NewsCard key={news.id} news={news} />}</For>
-                </Stack>
-            )}
-            {!isLoading && news && news.length === 0 && <EmptyList />}
-            <Pagination
-                pageIndex={filter.pageIndex}
-                pageSize={filter.pageSize}
-                setPageIndex={setPageIndex}
-                setPageSize={setPageSize}
-            />
-            <Button
-                rounded={'full'}
-                fontSize={'sm'}
-                bg={'#0D3D71'}
-                _hover={{ bg: '#1B4D85' }}
-                color={'white'}
-                w="fit-content"
-                fontWeight={700}
-                onClick={() => navigate('/')}
-            >
-                <LuCircleArrowLeft />
-                Voltar à página inicial
-            </Button>
+        <Flex bg={'#1A2855'} justify={'center'} align={'center'} w="full">
+            <Flex flexDir={'column'} gap={8} py={8} px={4} maxW={'800px'} justify={'center'} align={'center'}>
+                {isLoading && <CardSkeleton count={5} />}
+                {!isLoading && news && news.length > 0 && (
+                    <Stack w="full" gap={8}>
+                        <For each={news}>{(news) => <NewsCard key={news.id} news={news} />}</For>
+                    </Stack>
+                )}
+                {!isLoading && news && news.length === 0 && <EmptyList />}
+                <Pagination
+                    pageIndex={filter.pageIndex}
+                    pageSize={filter.pageSize}
+                    setPageIndex={setPageIndex}
+                    setPageSize={setPageSize}
+                />
+                <Button
+                    rounded={'full'}
+                    fontSize={'sm'}
+                    bg={'#0D3D71'}
+                    _hover={{ bg: '#1B4D85' }}
+                    color={'white'}
+                    w="fit-content"
+                    fontWeight={700}
+                    onClick={() => navigate('/')}
+                >
+                    <LuCircleArrowLeft />
+                    Voltar à página inicial
+                </Button>
+            </Flex>
         </Flex>
     );
 }

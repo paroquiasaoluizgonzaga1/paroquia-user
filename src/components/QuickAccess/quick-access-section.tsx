@@ -35,6 +35,13 @@ const quickAccessLinks: IQuickAccess[] = [
         url: '/faca-sua-doacao',
         isExternal: false,
     },
+    {
+        icon: <LuInfo />,
+        color: '#F69F53',
+        title: 'Outras informações',
+        url: '/outras-informacoes',
+        isExternal: false,
+    },
     // {
     //     icon: <FaPersonPraying />,
     //     color: 'blue.800',

@@ -27,7 +27,7 @@ export function NewsSection() {
                 setNews(response.data);
             })
             .catch(() => {
-                toaster.error({ title: 'Erro ao carregar informações e avisos' });
+                toaster.error({ title: 'Erro ao carregar comunicados e avisos' });
             })
             .finally(() => {
                 setIsLoading(false);
@@ -41,7 +41,7 @@ export function NewsSection() {
                     <FaRegBell />
                 </Icon>
                 <Heading fontWeight={700} fontSize={'xl'} color={'white'}>
-                    Informações e avisos
+                    Comunicados e avisos
                 </Heading>
             </HStack>
             {isLoading && <CardSkeleton count={3} />}
