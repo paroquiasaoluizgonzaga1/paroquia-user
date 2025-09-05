@@ -39,7 +39,7 @@ export function InitialSection() {
     }, []);
 
     return (
-        <Flex flexDir={'column'} justify={'center'} align={'center'} gap={8} bg={'#1A2855'} pb={8}>
+        <Flex flexDir={'column'} justify={'center'} align={'center'} gap={4} bg={'#1A2855'} pb={8}>
             <Flex maxW={'1000px'} pos={'relative'}>
                 <Image
                     src={isMobile ? headerImageMobile : headerImage}
@@ -52,9 +52,6 @@ export function InitialSection() {
             </Flex>
             <Stack color={'white'} px={4} textAlign={'center'} gap={8}>
                 <LiveStreamCard />
-                <Heading as={'h2'} color={'#F69F53'} fontSize={'lg'}>
-                    Rua Liberato Salzano Vieira da Cunha, 805 - São Luiz, Sapiranga - RS
-                </Heading>
                 <HighlightedNewsCard />
             </Stack>
             <HStack>
