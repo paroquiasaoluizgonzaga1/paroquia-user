@@ -51,6 +51,9 @@ export function InitialSection() {
                 </Box>
             </Flex>
             <Stack color={'white'} px={4} textAlign={'center'} gap={8}>
+                <Heading as={'h2'} color={'#F69F53'} fontSize={'xl'} fontWeight={700}>
+                    Seja bem-vindo(a)!
+                </Heading>
                 <LiveStreamCard />
                 <HighlightedNewsCard />
             </Stack>
