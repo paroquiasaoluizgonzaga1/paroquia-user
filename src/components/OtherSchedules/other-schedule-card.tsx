@@ -14,7 +14,17 @@ export function OtherScheduleCard({ schedule }: IOtherScheduleCardProps) {
             </Text>
             <Separator w="full" />
             <Box w="full">
-                <Prose maxW={'800px'} dangerouslySetInnerHTML={{ __html: schedule.content }} />
+                <Prose
+                    maxW={'800px'}
+                    css={{
+                        '& p': {
+                            whiteSpace: 'pre-line',
+                            lineHeight: '1.1',
+                        },
+                        '& p:empty': { minHeight: '0.5em' },
+                    }}
+                    dangerouslySetInnerHTML={{ __html: schedule.content }}
+                />
             </Box>
         </Stack>
     );
