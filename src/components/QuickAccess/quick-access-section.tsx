@@ -1,7 +1,7 @@
 import type { IQuickAccess } from '@/interfaces/IQuickAccess';
 import { LuInfo } from 'react-icons/lu';
 import { IoMdHeart } from 'react-icons/io';
-import { PiCross, PiSquaresFour, PiHandsPrayingFill, PiHeartFill } from 'react-icons/pi';
+import { PiCross, PiSquaresFour, PiHandsPrayingFill, PiHeartFill, PiNote } from 'react-icons/pi';
 import { FaBookBible } from 'react-icons/fa6';
 import { Flex, Heading, Stack } from '@chakra-ui/react';
 import { QuickAccessCard } from './quick-access-card';
@@ -12,6 +12,13 @@ const quickAccessLinks: IQuickAccess[] = [
         color: '#F69F53',
         title: 'Portal da Transparência',
         url: '/portal-da-transparencia',
+        isExternal: false,
+    },
+    {
+        icon: <PiNote />,
+        color: '#F69F53',
+        title: 'Obras e reformas',
+        url: '/obras-e-reformas',
         isExternal: false,
     },
     {

@@ -9,6 +9,7 @@ import { Pix } from './pages/pix';
 import { News } from './pages/news';
 import { NewsById } from './pages/news-by-id';
 import { Tithe } from './pages/tithe';
+import { WorksAndRenovations } from './pages/works-and-renovations';
 
 export function Router() {
     return (
@@ -26,6 +27,7 @@ export function Router() {
                     element={<OtherSchedulesSection type={OtherScheduleTypes.OtherInformations} />}
                 />
                 <Route path="/portal-da-transparencia" element={<TransparencyPortal />} />
+                <Route path="/obras-e-reformas" element={<WorksAndRenovations />} />
                 <Route path="/faca-sua-doacao" element={<Pix />} />
                 <Route path="/avisos" element={<News />} />
                 <Route path="/avisos/:id" element={<NewsById />} />

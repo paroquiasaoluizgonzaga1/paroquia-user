@@ -1,6 +1,6 @@
 import { FaRegBell } from 'react-icons/fa6';
 import { LuAlarmClock, LuInfo } from 'react-icons/lu';
-import { PiCross, PiHeart, PiHouse, PiSquaresFour } from 'react-icons/pi';
+import { PiCross, PiHeart, PiHouse, PiNote, PiSquaresFour } from 'react-icons/pi';
 import { create } from 'zustand';
 
 interface IHeader {
@@ -58,6 +58,14 @@ const getHeader = (path: string) => {
                 icon: <LuInfo />,
                 iconColor: '#F69F53',
                 href: '/portal-da-transparencia',
+                bg: '#1A2855',
+            };
+        case '/obras-e-reformas':
+            return {
+                title: 'Obras e reformas',
+                icon: <PiNote />,
+                iconColor: '#F69F53',
+                href: '/obras-e-reformas',
                 bg: '#1A2855',
             };
         case '/pastorais-grupos-e-servicos':
