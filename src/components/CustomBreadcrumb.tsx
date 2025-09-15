@@ -17,7 +17,7 @@ export function CustomBreadcrumb({ items, current }: CustomBreadcrumbProps) {
             {items.map((item) =>
                 item.link ? (
                     <NavLink to={item.link} key={item.title}>
-                        <BreadcrumbLink as={'p'} color={'white'}>
+                        <BreadcrumbLink as={'p'} color={'white'} minW={'45px'}>
                             {item.title}
                         </BreadcrumbLink>
                     </NavLink>

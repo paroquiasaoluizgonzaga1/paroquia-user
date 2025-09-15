@@ -22,6 +22,13 @@ const quickAccessLinks: IQuickAccess[] = [
         isExternal: false,
     },
     {
+        icon: <PiHeartFill />,
+        color: 'red.700',
+        title: 'O que é o Dízimo? Cadastre-se',
+        url: '/cadastro-de-dizimista',
+        isExternal: false,
+    },
+    {
         icon: <PiCross />,
         color: 'blue.800',
         title: 'Sacramentos',
@@ -69,13 +76,6 @@ const quickAccessLinks: IQuickAccess[] = [
         title: 'Como rezar o Santo Terço',
         url: 'https://formacao.cancaonova.com/espiritualidade/oracao/voce-sabe-como-rezar-o-santo-terco/',
         isExternal: true,
-    },
-    {
-        icon: <PiHeartFill />,
-        color: 'red.700',
-        title: 'Cadastro de dizimista',
-        url: '/cadastro-de-dizimista',
-        isExternal: false,
     },
 ];
 

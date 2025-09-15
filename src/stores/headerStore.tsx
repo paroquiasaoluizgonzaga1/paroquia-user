@@ -105,7 +105,7 @@ const getHeader = (path: string) => {
             };
         case '/cadastro-de-dizimista':
             return {
-                title: 'Cadastro de dizimista',
+                title: 'O que é o Dízimo? Cadastre-se como dizimista',
                 icon: <PiHeart />,
                 iconColor: 'red.700',
                 href: '/cadastro-de-dizimista',

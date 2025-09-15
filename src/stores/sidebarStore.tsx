@@ -9,6 +9,8 @@ import {
     PiCrossFill,
     PiHeart,
     PiHeartFill,
+    PiNote,
+    PiNoteFill,
     PiSquaresFour,
     PiSquaresFourFill,
 } from 'react-icons/pi';
@@ -38,6 +40,12 @@ const menuItems: IMenu[] = [
         href: '/portal-da-transparencia',
         icon: <LuInfo />,
         iconActive: <LuInfo />,
+    },
+    {
+        title: 'Obras e reformas',
+        href: '/obras-e-reformas',
+        icon: <PiNote />,
+        iconActive: <PiNoteFill />,
     },
     {
         title: 'Doações através do PIX',
@@ -70,7 +78,7 @@ const menuItems: IMenu[] = [
         iconActive: <LuInfo />,
     },
     {
-        title: 'Cadastro de dizimista',
+        title: 'O que é o Dízimo? Cadastre-se',
         href: '/cadastro-de-dizimista',
         icon: <PiHeart />,
         iconActive: <PiHeartFill />,
