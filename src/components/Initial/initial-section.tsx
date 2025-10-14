@@ -10,8 +10,8 @@ import { Menu } from '../Header/Menu';
 import { LiveStreamCard } from './live-stream-card';
 import { HighlightedNewsCard } from './highlighted-news-card';
 
-import headerImage from '../../assets/paroquia_header.jpg';
-import headerImageMobile from '../../assets/paroquia_header_mobile.jpg';
+import headerImage from '../../assets/header_new_desktop.jpg';
+import headerImageMobile from '../../assets/header_new.jpg';
 
 export function InitialSection() {
     const navigate = useNavigate();
@@ -40,17 +40,13 @@ export function InitialSection() {
 
     return (
         <Flex flexDir={'column'} justify={'center'} align={'center'} gap={4} bg={'#1A2855'} pb={8}>
-            <Flex maxW={'1000px'} pos={'relative'}>
-                <Image
-                    src={isMobile ? headerImageMobile : headerImage}
-                    alt="Paróquia São Luiz Gonzaga"
-                    maxH={'350px'}
-                />
+            <Flex pos={'relative'}>
+                <Image src={isMobile ? headerImageMobile : headerImage} alt="Paróquia São Luiz Gonzaga" />
                 <Box pos={'absolute'} top={4} right={[4, 6, 8, 12]}>
                     <Menu />
                 </Box>
             </Flex>
-            <Stack color={'white'} px={4} textAlign={'center'} gap={8}>
+            <Stack color={'white'} px={4} textAlign={'center'} gap={8} mt={-4}>
                 <Heading as={'h2'} color={'#F69F53'} fontSize={'xl'} fontWeight={700}>
                     Seja bem-vindo(a)!
                 </Heading>
